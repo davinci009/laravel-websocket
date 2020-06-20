@@ -20,6 +20,9 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('chats', require('./components/ChatsComponent.vue').default);
+Vue.component('list', require('./components/ListComponent.vue').default);
+Vue.component('new_list', require('./components/NewListComponent.vue').default);
+Vue.component('parent', require('./components/ParentComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

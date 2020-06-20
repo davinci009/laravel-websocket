@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Message;
+use App\Events\MessageSent;
+use Illuminate\Http\Request;
 
 class ChatsController extends Controller
 {
@@ -27,7 +28,7 @@ class ChatsController extends Controller
 			'message' => $request->message
 		]);
 
-		broadcast(new MessageSent($msg));
+		broadcast(new MessageSent($msg->load('user')))->toOthers();
 
 		return ['status' => 'Success'];
 	}

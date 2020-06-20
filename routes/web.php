@@ -21,3 +21,7 @@ Route::get('/chats', 'ChatsController@index');
 Route::get('/messages', 'ChatsController@fetchMessages');
 Route::post('/messages', 'ChatsController@sendMessages');
 
+
+
+
+Route::get('/todo', 'TodoListController@index');

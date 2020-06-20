@@ -30,7 +30,7 @@ return [
             'path' => env('PUSHER_APP_PATH'),
             'capacity' => null,
             'enable_client_messages' => false,
-            'enable_statistics' => true,
+            'enable_statistics' => false,
         ],
     ],
 
@@ -85,7 +85,7 @@ return [
         /*
          * Here you can specify the interval in seconds at which statistics should be logged.
          */
-        'interval_in_seconds' => 60,
+        'interval_in_seconds' => 2000,
 
         /*
          * When the clean-command is executed, all recorded statistics older than
